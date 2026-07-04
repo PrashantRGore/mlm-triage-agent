@@ -1,0 +1,12 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+chroma_mlm_db/
+*.csv
+*.log
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db\n
