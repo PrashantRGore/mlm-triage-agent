@@ -1,0 +1,54 @@
+%%{init:{
+"theme":"base",
+"themeVariables":{
+"background":"transparent",
+"lineColor":"#94A3B8",
+"fontFamily":"Segoe UI"
+},
+"flowchart":{
+"nodeSpacing":45,
+"rankSpacing":70
+}
+}}%%
+
+flowchart LR
+
+A["👤<br/>User"]
+
+B["🐍<br/>Python<br/>Application"]
+
+C["🦜<br/>LangChain<br/>Orchestration"]
+
+D["🧩<br/>Embedding<br/>Model"]
+
+E["🗄️<br/>ChromaDB"]
+
+F["🔍<br/>Retriever"]
+
+G["🤖<br/>Llama 3.2<br/>via Ollama"]
+
+H["📦<br/>Pydantic<br/>Validation"]
+
+I["📄<br/>CSV<br/>Output"]
+
+A --> B
+B --> C
+C --> D
+D --> E
+C --> F
+F --> E
+F --> G
+G --> H
+H --> I
+
+classDef user fill:#64748B,color:#fff,stroke:#475569,stroke-width:2.5px;
+classDef app fill:#2563EB,color:#fff,stroke:#1D4ED8,stroke-width:2.5px;
+classDef framework fill:#4F46E5,color:#fff,stroke:#4338CA,stroke-width:2.5px;
+classDef ai fill:#0891B2,color:#fff,stroke:#0E7490,stroke-width:2.5px;
+classDef output fill:#059669,color:#fff,stroke:#047857,stroke-width:2.5px;
+
+class A user
+class B app
+class C,D,E,F framework
+class G ai
+class H,I output

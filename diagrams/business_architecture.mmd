@@ -1,0 +1,48 @@
+%%{init:{
+"theme":"base",
+"themeVariables":{
+"background":"transparent",
+"lineColor":"#94A3B8",
+"fontFamily":"Segoe UI"
+},
+"flowchart":{
+"nodeSpacing":45,
+"rankSpacing":70
+}
+}}%%
+
+flowchart LR
+
+L["📚<br/>Medical<br/>Literature"]
+
+A["📥<br/>Literature<br/>Acquisition"]
+
+K["🗂<br/>Knowledge<br/>Representation"]
+
+R["🔎<br/>Knowledge<br/>Retrieval"]
+
+AI["🤖<br/>AI Clinical<br/>Assessment"]
+
+D["📋<br/>Structured<br/>Regulatory<br/>Output"]
+
+L --> A
+A --> K
+K --> R
+R --> AI
+AI --> D
+
+classDef external fill:#64748B,color:#FFFFFF,stroke:#475569,stroke-width:2.5px;
+
+classDef business fill:#2563EB,color:#FFFFFF,stroke:#1D4ED8,stroke-width:2.5px;
+
+classDef knowledge fill:#4F46E5,color:#FFFFFF,stroke:#4338CA,stroke-width:2.5px;
+
+classDef ai fill:#0891B2,color:#FFFFFF,stroke:#0E7490,stroke-width:2.5px;
+
+classDef output fill:#059669,color:#FFFFFF,stroke:#047857,stroke-width:2.5px;
+
+class L external
+class A business
+class K,R knowledge
+class AI ai
+class D output

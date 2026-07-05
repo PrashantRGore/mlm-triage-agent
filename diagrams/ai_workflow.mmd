@@ -1,0 +1,50 @@
+%%{init:{
+"theme":"base",
+"themeVariables":{
+"background":"transparent",
+"lineColor":"#94A3B8",
+"fontFamily":"Segoe UI"
+},
+"flowchart":{
+"nodeSpacing":45,
+"rankSpacing":70
+}
+}}%%
+
+flowchart LR
+
+A["📄<br/>PubMed<br/>Literature"]
+
+B["🧩<br/>Generate<br/>Embeddings"]
+
+C["🗄️<br/>Store in<br/>ChromaDB"]
+
+D["🔍<br/>Semantic<br/>Retrieval"]
+
+E["📚<br/>Relevant<br/>Context"]
+
+F["🤖<br/>LLM<br/>Reasoning"]
+
+G["📋<br/>Extract<br/>ICSR Criteria"]
+
+H["📊<br/>Structured<br/>CSV Output"]
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
+G --> H
+
+classDef source fill:#64748B,color:#fff,stroke:#475569,stroke-width:2.5px;
+classDef processing fill:#2563EB,color:#fff,stroke:#1D4ED8,stroke-width:2.5px;
+classDef storage fill:#4F46E5,color:#fff,stroke:#4338CA,stroke-width:2.5px;
+classDef ai fill:#0891B2,color:#fff,stroke:#0E7490,stroke-width:2.5px;
+classDef output fill:#059669,color:#fff,stroke:#047857,stroke-width:2.5px;
+
+class A source
+class B,D,E,G processing
+class C storage
+class F ai
+class H output
